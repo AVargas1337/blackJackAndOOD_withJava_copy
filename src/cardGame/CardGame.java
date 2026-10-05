@@ -1,4 +1,9 @@
 //Alberto Vargas
+//originally created on 9.24.2026
+// Group Members: Carlos Vega
+// Program: BlackJack Card Game
+// Purpose: Reads card data, creates Card objects, shuffles the deck,
+//deals cards to the player, checks for pairs, and counts face cards.
 
 package cardGame;
 
