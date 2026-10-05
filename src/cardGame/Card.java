@@ -85,6 +85,18 @@ public class Card {
 			Card other = (Card) obj;
 			return Objects.equals(cardName, other.cardName) && Objects.equals(cardPicture, other.cardPicture)
 					&& Objects.equals(cardSuit, other.cardSuit) && cardValue == other.cardValue;
+		}
+
+
+		public boolean isFaceCard() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+
+		public boolean isFaceCard() {
+			// TODO Auto-generated method stub
+			return false;
 		}	
 }//end class
 
