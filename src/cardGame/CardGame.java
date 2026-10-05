@@ -1,3 +1,5 @@
+//Alberto Vargas
+
 package cardGame;
 
 import java.io.File;
@@ -30,19 +32,32 @@ public class CardGame {
 			deckOfCards.add(newCard);	
 		}
 
+		//TEMPORARY: print deck to verify correct loading
+	/*	for (Card c: deckOfCards) {
+			System.out.println(c);
+			}
+    */
 		shuffle();
 
-		//for(Card c: deckOfCards)
-			//System.out.println(c);
 
 		//deal the player 5 cards
 		for(int i = 0; i < 4; i++) {
 			playerCards.add(deckOfCards.remove(i));
 		}
-		
+
 		System.out.println("players cards");
 		for(Card c: playerCards)
 			System.out.println(c);
+
+		//Count face cards
+		int faceCount = 0;
+		for (Card c : playerCards) {
+			if (c.isFaceCard()) {
+				faceCount++;
+			}
+		}
+
+		System.out.println("Number of face cards: " + faceCount);
 
 		System.out.println("pairs is " + checkFor2Kind());
 
@@ -66,7 +81,7 @@ public class CardGame {
 		for(int i = 0; i < playerCards.size() - 1; i++) {
 			Card current = playerCards.get(i);
 			Card next = playerCards.get(i+1);
-			
+
 			for(int j = i+1; j < playerCards.size(); j++) {
 				next = playerCards.get(j);
 				//System.out.println(" comparing " + current);
